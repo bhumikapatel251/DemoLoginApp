@@ -17,6 +17,7 @@ struct ContentView: View {
                     Text("Login")
                     Text("Create Account")
                 }
+                .pickerStyle(SegmentedPickerStyle())
                 Text("Here is my creation Account Screen")
             }
             .navigationTitle("Create Account")
