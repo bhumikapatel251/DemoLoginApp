@@ -46,7 +46,13 @@ struct ContentView: View {
                             isTapped = false
                         }
                     }
-                    
+                    .overlay(
+                        Text("Email")
+                            .scaleEffect(0.8)
+                            .foregroundColor(.gray)
+                        
+                        ,alignment: .leading
+                    )
                 })
                 .padding(.vertical,12)
                 .padding(.horizontal)
