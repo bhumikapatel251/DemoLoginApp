@@ -15,7 +15,9 @@ struct ContentView: View {
             ScrollView{
                 Picker(selection: $isLoginMode, label: Text("Picker here")) {
                     Text("Login")
+                        .tag(true)
                     Text("Create Account")
+                        .tag(false)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 Text("Here is my creation Account Screen")
