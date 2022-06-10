@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CreateAccountScreen.swift
 //  DemoLoginApp
 //
 //  Created by Bhumika Patel on 10/06/22.
@@ -7,15 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    
-    @State var isLoginMode = false
-    
+struct CreateAccountScreen: View {
     @State var email = ""
     @State var pass = ""
     @State var conPass = ""
-    //Animation Properties
-    @State var isTapped = false
     var body: some View {
         NavigationView{
             ScrollView{
@@ -76,42 +71,54 @@ struct ContentView: View {
                     }
                     .padding()
                     
+                    VStack {
+                        HStack{
+                            Button(action: {},
+                                   label: {
+                                Image(systemName: "lock")
+                                    .font(.system(size: 22))
+                            })
+                            SecureField("Confirm Password", text: $conPass)
+                               // .keyboardType()
+                                .autocapitalization(.none)
+                        }
                     
-                    
-                    Button{
-                        
-                    } label: {
-                        Text("ForgotPassword")
-                            .foregroundColor(.black)
+                    //divider
+                    Rectangle()
+                        .fill(Color.gray)
+                        .opacity(1.5)
+                        .frame(width: 300,height:1)
+                        .padding(.top,5)
                     }
+                    .padding()
+                    
                     Button(action: {}, label: {
                         Spacer()
-                        Text("Login")
+                        Text("Create")
                             .foregroundColor(.white)
                             .padding(.vertical,10)
                         Spacer()
                           
                     })
+                    
                    
                     .background(Color.blue)
+                    .frame(width:350, height: 50)
+                    .cornerRadius(50)
                     
-                    NavigationLink(
-                        destination: CreateAccountScreen(),
-                     label: {
-                        Text("Create Account")
-                            .foregroundColor(.black)
-                    }
-                   )
+                    
+                    
                 }
+               
             }
-            .navigationTitle("Log In")
+            .navigationTitle("CreateAccount")
         }
         
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CreateAccountScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CreateAccountScreen()
     }
 }

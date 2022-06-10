@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC4CF3A12853644A002A5241 /* CreateAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CF3A02853644A002A5241 /* CreateAccountScreen.swift */; };
 		AC80D92628531FD6007CF53F /* DemoLoginAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D92528531FD6007CF53F /* DemoLoginAppApp.swift */; };
 		AC80D92828531FD6007CF53F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D92728531FD6007CF53F /* ContentView.swift */; };
 		AC80D92A28531FD8007CF53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC80D92928531FD8007CF53F /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC4CF3A02853644A002A5241 /* CreateAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountScreen.swift; sourceTree = "<group>"; };
 		AC80D92228531FD6007CF53F /* DemoLoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC80D92528531FD6007CF53F /* DemoLoginAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLoginAppApp.swift; sourceTree = "<group>"; };
 		AC80D92728531FD6007CF53F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				AC80D92728531FD6007CF53F /* ContentView.swift */,
 				AC80D92928531FD8007CF53F /* Assets.xcassets */,
 				AC80D92B28531FD8007CF53F /* Preview Content */,
+				AC4CF3A02853644A002A5241 /* CreateAccountScreen.swift */,
 			);
 			path = DemoLoginApp;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC80D92828531FD6007CF53F /* ContentView.swift in Sources */,
+				AC4CF3A12853644A002A5241 /* CreateAccountScreen.swift in Sources */,
 				AC80D92628531FD6007CF53F /* DemoLoginAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
