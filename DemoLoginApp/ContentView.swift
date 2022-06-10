@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     @State var isLoginMode = false
+    
+    @State var text = ""
+    //Animation Properties
+    @State var isTapped = false
     var body: some View {
         NavigationView{
             ScrollView{
@@ -28,6 +32,26 @@ struct ContentView: View {
                         .font(.system(size: 64))
                         .padding()
                 }
+                VStack(alignment: .leading, spacing: 4, content: {
+                    TextField("", text: $text) { (status) in
+                    
+                        if status{
+                            withAnimation(.easeIn){
+                            
+                                isTapped = true
+                            }
+                        }
+                    } onCommit: {
+                        withAnimation(.easeOut){
+                            isTapped = false
+                        }
+                    }
+                    
+                })
+                .padding(.vertical,12)
+                .padding(.horizontal)
+                .background(Color.gray.opacity(0.09))
+                .cornerRadius(5)
                 Text("Here is my creation Account Screen")
             }
             .navigationTitle("Create Account")
