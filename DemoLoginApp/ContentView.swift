@@ -46,9 +46,15 @@ struct ContentView: View {
                             isTapped = false
                         }
                     }
-                    .overlay(
+                    // if tapped
+                    .padding(.top, isTapped ? 15 : 0)
+                    //overlay will avoid clicked the textfield
+                    //so moving it below the text field
+                    
+                    .background(
                         Text("Email")
-                            .scaleEffect(0.8)
+                            .scaleEffect(isTapped ? 0.8 : 1)
+                            .offset(x: isTapped ? -7 : 0, y: isTapped ? -15 : 0 )
                             .foregroundColor(.gray)
                         
                         ,alignment: .leading
