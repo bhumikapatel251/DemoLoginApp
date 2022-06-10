@@ -20,6 +20,14 @@ struct ContentView: View {
                         .tag(false)
                 }
                 .pickerStyle(SegmentedPickerStyle())
+                .padding()
+                Button {
+                    
+                } label: {
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 64))
+                        .padding()
+                }
                 Text("Here is my creation Account Screen")
             }
             .navigationTitle("Create Account")
