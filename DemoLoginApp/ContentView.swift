@@ -24,11 +24,11 @@ struct ContentView: View {
                         VStack {
                             HStack {
                                 Image(systemName: "envelope")
-                                TextField("", text: self.$email)
+                                TextField("Email", text: self.$email)
                             }
                             Rectangle()
                                 .fill(self.email == "" ? Color.black.opacity(0.08) : Color.blue)
-                                .frame(width:330,height: 3)
+                                .frame(height: 3)
                                 .padding(.top,0)
                                 .padding()
                         //divider
@@ -43,11 +43,11 @@ struct ContentView: View {
                         HStack {
                             Image(systemName: "lock")
                                 .font(.system(size: 22))
-                            SecureField("", text: self.$pass)
+                            SecureField("Password", text: self.$pass)
                         }
                         Rectangle()
                             .fill(self.email == "" ? Color.black.opacity(0.08) : Color.blue)
-                            .frame(width:330,height: 3)
+                            .frame(height: 3)
                             .padding(.top,0)
                             .padding()
                     
@@ -91,34 +91,40 @@ struct ContentView: View {
                                             TextField("", text: self.$email)
                                                 .keyboardType(.emailAddress)
                                                 .autocapitalization(.none)
-                                            Rectangle()
-                                                .fill(self.email == "" ? Color.black.opacity(0.08) : Color("Color"))
-                                                .frame(width:280,height: 3)
-                                                .padding(.top,40)
+                                            
                                         }
-                                        .padding()
+                                        Rectangle()
+                                            .fill(self.email == "" ? Color.black.opacity(0.08) : Color.blue)
+                                            .frame(height: 3)
+                                            .padding(.top,0)
+                                            .padding()
                                  
                                    
                                     }
+                                    
                                     .foregroundColor(Color.black.opacity(0.7))
                                     .padding()
                                     .background(Color.white)
                                     .overlay(Rectangle().stroke(Color.black.opacity(0.03),lineWidth: 1).shadow(radius:4))
                                     .padding(.horizontal)
                                     .padding(.bottom,10)
-                                    Button{
+                                    
+                                    VStack {
+                                        Button(action: {}, label: {
                                         
-                                    } label: {
-                                        Text("Send")
-                                            .font(.system(size: 17).bold())
-                                           .padding(.vertical,20)
-                                            .frame(width: 350, height: 50)
-                                            .foregroundColor(.white)
-                                            .background(.blue)
-                                            .cornerRadius(15)
-                                            .shadow(color: Color.black.opacity(0.07), radius: 5, x: 5, y: 5)
-                                        
-                                        
+                                            Text("Send")
+                                                .fontWeight(.bold)
+                                                .foregroundColor(.white)
+                                                .padding(.vertical)
+                                                .padding(.horizontal, 35)
+                                                .frame(width: 280, height: 50)
+                                                .background(LinearGradient(gradient: .init(colors: [Color("Color"),Color("Color-1")]), startPoint: .leading, endPoint: .trailing))
+                                                .cornerRadius(30)
+                                                //.frame(width: 200, height: 100, alignment: .bottom)
+                                        })
+                                        .padding(.vertical,0)
+                                        .padding(.trailing,180)
+                                       // .padding()
                                     }
                                     .padding(.top,25)
                                 }
@@ -128,9 +134,9 @@ struct ContentView: View {
                     .foregroundColor(Color.black.opacity(0.7))
                     .padding()
                     .background(Color.white)
-                    .overlay(Rectangle().stroke(Color.black.opacity(0.03),lineWidth: 1).shadow(radius:4))
-                    .padding(.horizontal)
-                    .padding(.bottom,30)
+                    .overlay(Rectangle().stroke(Color.black.opacity(0.09),lineWidth: 2).shadow(radius:5))
+                    .padding(.horizontal,10)
+                    .padding(.bottom,20)
                     VStack {
                         Button(action: {}, label: {
                         
