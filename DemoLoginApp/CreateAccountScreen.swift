@@ -13,7 +13,7 @@ struct CreateAccountScreen: View {
     @State var conPass = ""
     var body: some View {
         NavigationView{
-            ScrollView{
+          
                 VStack{
 
 //                    Picker(selection: $isLoginMode, label: Text("Picker here")) {
@@ -110,7 +110,7 @@ struct CreateAccountScreen: View {
                     
                 }
                
-            }
+            
             .navigationTitle("CreateAccount")
         }
         
