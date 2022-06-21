@@ -9,8 +9,8 @@ import Foundation
 import Alamofire
 //import SwiftKeychainWrapper
 
-class OAuthManager{
-    static let shareInstance = OAuthManager()
+class OAuthManager: ObservableObject{
+    //static let shareInstance = OAuthManager()
     
     func callingoauthAPI(register: DataModel, completionHandler: @escaping (Bool, String) -> ()){
         let headers: HTTPHeaders = [

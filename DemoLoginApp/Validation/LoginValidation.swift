@@ -7,55 +7,26 @@
 
 import Foundation
 
-struct ValidationResult {
-    var success: Bool = false
-    var errorMessage : String?
-}
-
-struct LoginValidation {
+class LoginValidation: ObservableObject {
     
-    func validationUserInputs(userEmail: String, userPassword: String) -> ValidationResult {
-        
-        if(userEmail.isEmpty || userPassword.isEmpty){
-            return ValidationResult(success: false, errorMessage: "User email and password cannot be empty")
-        }
-        if(isValidEmail(value: userEmail) == false){
-            return ValidationResult(success: false, errorMessage: "Useremail format incorrect")
-        }
-        
-        return ValidationResult(success: true, errorMessage: nil)
+    @Published var email = ""
+    @Published var password = ""
+
+    func isPasswordValid() -> Bool {
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@",
+                                       "^(?=.*[a-z]).{4,}$")
+        return passwordTest.evaluate(with: password)
     }
     
-    private func isValidEmail(value: String) -> Bool
-    {
-        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
-        return regex.firstMatch(in: value, options: [], range: NSRange(location: 0, length: value.count)) != nil
-            
+    func isEmailValid() -> Bool {
+        let emailTest = NSPredicate(format: "SELF MATCHES %@",
+                                    "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
+        return emailTest.evaluate(with: email)
     }
-    private func isValidPassword(str: String) -> [String]
-    {
-            
-        var errors: [String] = []
-           if(!NSPredicate(format:"SELF MATCHES %@", ".*[A-Z]+.*").evaluate(with: str)){
-               errors.append("least one uppercase")
-           }
-           
-           if(!NSPredicate(format:"SELF MATCHES %@", ".*[0-9]+.*").evaluate(with: str)){
-               errors.append("least one digit")
-           }
-
-           if(!NSPredicate(format:"SELF MATCHES %@", ".*[!&^%$#@()/]+.*").evaluate(with: str)){
-               errors.append("least one symbol")
-           }
-           
-           if(!NSPredicate(format:"SELF MATCHES %@", ".*[a-z]+.*").evaluate(with: str)){
-               errors.append("least one lowercase")
-           }
-           
-           if(str.count < 8){
-               errors.append("min 8 characters total")
-           }
-           return errors
-            
-    }
+    
+    var isLoginComplete: Bool { return isPasswordValid() && isEmailValid() }
+    
+    var emailPrompt: String { return isEmailValid() ? "" : "Enter a valid email address" }
+    
+    var passwordPrompt: String { return isPasswordValid() ? "" : "Enter a valid email address" }
 }

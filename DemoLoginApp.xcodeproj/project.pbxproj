@@ -20,6 +20,7 @@
 		AC80D93728531FD8007CF53F /* DemoLoginAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D93628531FD8007CF53F /* DemoLoginAppTests.swift */; };
 		AC80D94128531FD8007CF53F /* DemoLoginAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D94028531FD8007CF53F /* DemoLoginAppUITests.swift */; };
 		AC80D94328531FD8007CF53F /* DemoLoginAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D94228531FD8007CF53F /* DemoLoginAppUITestsLaunchTests.swift */; };
+		AC97F2CE2861A2D9000A621C /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97F2CD2861A2D9000A621C /* DisplayView.swift */; };
 		ACA1A76128585EC90094280E /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1A76028585EC90094280E /* FirstScreen.swift */; };
 		ACA1A766285860190094280E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1A765285860190094280E /* DataModel.swift */; };
 		ACA1A769285868C40094280E /* ApiCalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1A768285868C40094280E /* ApiCalling.swift */; };
@@ -65,6 +66,7 @@
 		AC80D93C28531FD8007CF53F /* DemoLoginAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoLoginAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC80D94028531FD8007CF53F /* DemoLoginAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLoginAppUITests.swift; sourceTree = "<group>"; };
 		AC80D94228531FD8007CF53F /* DemoLoginAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLoginAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC97F2CD2861A2D9000A621C /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		ACA1A76028585EC90094280E /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		ACA1A765285860190094280E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		ACA1A768285868C40094280E /* ApiCalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCalling.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				AC4CF3A02853644A002A5241 /* CreateAccountScreen.swift */,
 				AC3D11AD2857558B00B23C5A /* LoginScreen.swift */,
 				ACA1A76028585EC90094280E /* FirstScreen.swift */,
+				AC97F2CD2861A2D9000A621C /* DisplayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC97F2CE2861A2D9000A621C /* DisplayView.swift in Sources */,
 				ACA1A7792858A99D0094280E /* HttpUtility.swift in Sources */,
 				ACA1A76E285882AF0094280E /* Api1.swift in Sources */,
 				AC80D92828531FD6007CF53F /* ContentView.swift in Sources */,
